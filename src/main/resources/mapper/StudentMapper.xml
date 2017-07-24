@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.module.product.orm.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.module.product.orm.model.Student">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="picture" jdbcType="VARCHAR" property="picture" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="education" jdbcType="INTEGER" property="education" />
+    <result column="profession" jdbcType="VARCHAR" property="profession" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="last_pay_time" jdbcType="TIMESTAMP" property="lastPayTime" />
+    <result column="register_type" jdbcType="INTEGER" property="registerType" />
+    <result column="reg_time" jdbcType="TIMESTAMP" property="regTime" />
+  </resultMap>
+
+</mapper>
