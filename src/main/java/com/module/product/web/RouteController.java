@@ -1,6 +1,8 @@
 package com.module.product.web;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
+import com.google.common.collect.Lists;
+import com.module.product.orm.model.Student;
 import com.module.product.service.CaptchaService;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
@@ -14,6 +16,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
+import java.util.Date;
+import java.util.List;
 
 /**
  * <p>
@@ -29,6 +33,16 @@ public class RouteController {
 
     @GetMapping("/")
     public ModelAndView home(ModelAndView mv) {
+
+        Student student = new Student();
+        student.setId(1);
+        student.setNickName("小王");
+        student.setRegTime(new Date());
+
+        List list = Lists.newArrayList();
+        list.add(student);
+        mv.addObject("stus",list);
+        mv.addObject("user",student);
         mv.setViewName("index");
         return  mv;
     }
