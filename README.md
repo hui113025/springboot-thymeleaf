@@ -15,8 +15,8 @@
 
 ### 开发流程
 1. 克隆项目至IDE并切换至dev分支
-2. 使用```com.ruhang.hf.CodeGenerator```代码生成工具生成对应数据表(```Model```)的基础代码。
-3. 如果包含页面路由在```com.ruhang.hf.web.RouteController```内添加对应的路由，否则直接第三步。
+2. 使用```com.module.product.CodeGenerator```代码生成工具生成对应数据表(```Model```)的基础代码。
+3. 如果包含页面路由在```com.module.product.web.RouteController```内添加对应的路由，否则直接第三步。
 4. 根据业务要求在基础代码上进行扩展。
 5. 提交代码(Commit Message 尽量能描述这次提交的代码内容，至少能让自己看明白。)
 
