@@ -33,16 +33,6 @@ public class RouteController {
 
     @GetMapping("/")
     public ModelAndView home(ModelAndView mv) {
-
-        Student student = new Student();
-        student.setId(1);
-        student.setNickName("小王");
-        student.setRegTime(new Date());
-
-        List list = Lists.newArrayList();
-        list.add(student);
-        mv.addObject("stus",list);
-        mv.addObject("user",student);
         mv.setViewName("index");
         return  mv;
     }
@@ -87,5 +77,21 @@ public class RouteController {
     @GetMapping(value = "/jsonp/redirect/view")
     public String getJsonpBody() {
         return "jsonp-redirect";
+    }
+
+    @GetMapping("/thymeleaf/sample")
+    public ModelAndView thymeleaf(ModelAndView mv) {
+
+        Student student = new Student();
+        student.setId(1);
+        student.setNickName("小王");
+        student.setRegTime(new Date());
+
+        List list = Lists.newArrayList();
+        list.add(student);
+        mv.addObject("stus",list);
+        mv.addObject("user",student);
+        mv.setViewName("thymeleaf-sample");
+        return  mv;
     }
 }

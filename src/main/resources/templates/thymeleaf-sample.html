@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf示例</title>
+    <!-- load stylesheets -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div><h4>1.获取变量值</h4></div>
+    <p>th:text="${user.id}" => <i th:text="${user.id}"/></p>
+    <p>th:text="${user.nickName}" => <i th:text="${user.nickName}"/></p>
+
+    <div><h4>2.引入URL</h4></div>
+    <p>绝对路径：th:href="@{http://blog.csdn.net/u012706811}" <a th:href="@{http://blog.csdn.net/u012706811}"></a></p>
+    <p>相对路径：th:href="@{/}"<a th:href="@{/}"></a></p>
+    <p>Content路径,默认访问static下的css文件夹：th:href="@{css/bootstrap.min.css}" <a th:href="@{css/bootstrap.min.css}"></a></p>
+    <div><h4>3.字符串替换</h4></div>
+    <p>th:text="'Welcome to our application, ' + ${user.nickName} + '!'" => <i th:text="'Welcome to our application, ' + ${user.nickName} + '!'" /></p>
+    <p>th:text="|Welcome to our application, ${user.nickName}!|" => <i th:text="|Welcome to our application, ${user.nickName}!|"/></p>
+
+    <div><h4>4.运算符</h4></div>
+    <p>th:text="${user.id * 2}" => <i th:text="${user.id * 2}" /></p>
+
+    <div><h4>5.条件</h4></div>
+    <p>th:if="${user != null}" => <a th:href="@{/}" th:if="${user != null}">th:if</a></p>
+    <p>th:unless="${user == null}" => <a th:href="@{/login}" th:unless="${user == null}">th:unless</a></p>
+    <div th:switch="${user.id}">
+        <p th:case="'1'">switch匹配值</p>
+        <p th:case="*">默认*</p>
+    </div>
+    <div><h4>6.循环</h4></div>
+    <p>th:each="stu : ${stus}" => </p>
+    <ul th:each="stu : ${stus}">
+        <li th:text="${stu.id}"/>
+        <li th:text="${stu.nickName}" />
+        <li th:text="${stu.regTime}" />
+    </ul>
+    <div><h4>7.Utilities</h4></div>
+    <p>th:text="${#dates.format(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" => <i th:text="${#dates.format(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" /></p>
+    <p>th:text="${#dates.listFormat(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" => <i th:text="${#dates.listFormat(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" /></p>
+    <p>th:text="${#dates.setFormat(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" => <i th:text="${#dates.setFormat(user.regTime, 'yyyy/MM/dd HH:mm:ss')}" /></p>
+
+    <!-- load JS files -->
+    <script src="../js/jquery-1.11.3.min.js"></script>            <!-- jQuery (https://jquery.com/download/) -->
+</body>
+</html>
