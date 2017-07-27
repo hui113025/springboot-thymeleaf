@@ -42,8 +42,8 @@ public class FileController {
     @Value("${file.upload.size.max.image}")
     private int imageFileMaxSize;
 
-    @PostMapping("/upload/image")
-    public Result uploadImage(@RequestParam MultipartFile imageFile, @RequestParam(defaultValue = "images") String dirName) {
+    @PostMapping("/upload/images")
+    public Result uploadImage(@RequestParam MultipartFile imageFile, @RequestParam(defaultValue = "image") String dirName) {
         if(StringUtils.isNotEmpty(validateImageFile(imageFile))){
             return ResultGenerator.genFailResult(validateImageFile(imageFile));
         }

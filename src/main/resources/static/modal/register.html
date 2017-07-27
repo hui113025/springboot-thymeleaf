@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../user/css/login.css"/>
+</head>
+<body>
+<div class="stratum">
+    <div class="alert">
+        <!--succeed start-->
+        <div class="succeed">
+            <div class="reset-top">
+                <ul>
+                    <li style="border-bottom: 2px solid #5583db ;">注册成功</li>
+                </ul>
+            </div>
+            <div class="succeed-bottom">
+                <img src="../user/images/yes.png">
+            </div>
+            <div class="succeed-step">
+                <input onclick="location.reload();" id="register-success-btn" type="button" value="确定"
+                       class="succeedNext-step"/>
+            </div>
+        </div>
+        <div id="container">
+        <!--succeed over-->
+        <div class="close-btn" onclick="layer.closeAll();"></div>
+        <div class="register-top">
+           <ul>
+                <li style="border-bottom: 2px solid #5583db;">欢迎注册</li>
+            </ul>
+        </div>
+        <div class="Control">
+            <div class="phong-Control">
+                <form id="phone-form">
+                    <div class="phone-number">
+                        <input id="phone" name="mobile" type="text" style="color:#999" data-tag="手机号码" value="手机号码" onfocus="if(this.value=='手机号码'){this.value=''};this.style.color='#333';" onblur="if(this.value==''||this.value=='手机号码'){this.value='手机号码';this.style.color='#999';}">
+                        <div class="positioning"></div>
+                    </div>
+                    <div class="password-number">
+                        <input type="password" id="phone-password" name="password" style="color:#999" placeholder="密码6~18位">
+                        <div class="positioning"></div>
+                    </div>
+                    <div class="code">
+                        <div class="code-number">
+                            <input id="image-captcha" name="captcha" type="text"style="color:#999" data-tag="验证码" value="验证码" onfocus="if(this.value=='验证码'){this.value=''};this.style.color='#333';" onblur="if(this.value==''||this.value=='验证码'){this.value='验证码';this.style.color='#999';}">
+                            <div class="positioning"></div>
+                        </div>
+                        <div class="code-img">
+                            <img id="capt-img" onclick="$(this).attr('src','/captcha/images?'+Math.random())" src="/captcha/image"/>
+                            <i onclick="$('#capt-img').attr('src','/captcha/image?'+Math.random())" class="restIcon kjsF5"></i>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div class="note-number">
+                            <input id="sms-captcha" name="smsCaptcha" type="text" style="color:#999" data-tag="短信验证码" value="短信验证码" onfocus="if(this.value=='短信验证码'){this.value=''};this.style.color='#333';" onblur="if(this.value==''||this.value=='短信验证码'){this.value='短信验证码';this.style.color='#999';}">
+                            <div class="positioning"></div>
+                        </div>
+                        <a class="Findnote-img" id="sms-btn">获取验证码</a>
+                        <a class="Findnote-img" id="sms-btn-readonly"
+                           style="cursor: auto;background:#cccccc;display: none"></a>
+                    </div>
+                    <div class="zhuce">
+                        <input id="phone-register-btn" type="button" value="注册" class="register"/>
+                    </div>
+                    <div class="protocol">
+                        <input type="checkbox" checked id="user-protocol-phone" class="user-protocol"/>
+                        <span>我已阅读并同意</span>
+                        <a href="../help?m=3" target="_blank">《用户注册协议》</a>
+                        <div class="positioning" style="position: static;float:left"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="email-Control">
+                <form id="email-form">
+                    <div class="email">
+                        <input type="email"style="color:#999999"  data-tag="邮箱" value="邮箱" onfocus="if(this.value=='邮箱'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='邮箱'){this.value='邮箱';this.style.color='#999999';}" name="username" id="email-username">
+                        <div class="positioning"></div>
+                    </div>
+                    <div class="email-pass">
+                        <input type="text" style="color:#999999" data-tag="密码6~18位" value="密码6~18位" onfocus="if(this.value=='密码6~18位'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='密码6~18位'){this.value='密码6~18位';this.style.color='#999999';}" name="password" id="email-password">
+                        <div class="positioning"></div>
+                    </div>
+                    <div class="code">
+                        <div class="code-numberO">
+                            <input type="text" style="color:#999999"  data-tag="验证码" value="验证码" onfocus="if(this.value=='验证码'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='验证码'){this.value='验证码';this.style.color='#999999';}" name="captcha" id="email-image-captcha">
+                            <div class="positioning"></div>
+                        </div>
+                        <div class="code-img">
+                            <img id="capt-img-email" onclick="$(this).attr('src','/captcha/image?'+Math.random())"
+                                 src="/captcha/image"/>
+                            <i onclick="$('#capt-img-email').attr('src','/captcha/image?'+Math.random())" class="restIcon kjsF5"></i>
+                        </div>
+                    </div>
+                </form>
+                <div class="email-zhuce">
+                    <input id="email-register-btn" type="button"  value="注册" class="email-register"/>
+                </div>
+                <div class="email-protocol">
+                    <input type="checkbox" checked id="user-protocol-email" class="user-protocol"/>
+                    <span>我已阅读并同意</span>
+                    <a href="/help?m=3" target="_blank">《用户注册协议》</a>
+                    <div class="positioning" style="position: static;float:left"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+        </div>
+</div>
+
+<script type="text/javascript" src="../user/js/register.js"></script>
+</body>
+</html>

@@ -55,7 +55,7 @@ public class RouteController {
         response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
         response.addHeader("Cache-Control", "post-check=0, pre-check=0");
         response.setHeader("Pragma", "no-cache");
-        response.setContentType("image/jpeg");
+        response.setContentType("images/jpeg");
 
         String capText = captchaProducer.createText();
         captchaService.setImageCaptcha(request.getSession(), capText);
@@ -93,5 +93,13 @@ public class RouteController {
         mv.addObject("user",student);
         mv.setViewName("thymeleaf-sample");
         return  mv;
+    }
+
+    /**
+     * Help 页面.
+     */
+    @GetMapping("/help")
+    public String help() {
+        return "help";
     }
 }

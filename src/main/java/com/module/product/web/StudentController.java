@@ -47,11 +47,11 @@ public class StudentController {
             subject.login(token);
             result.setState(ResultState.SUCCESS);
             Student user = ShiroUtils.getSessionUser();
-            result.setResInfo(user);
+            result = ResultGenerator.genSuccessResult(user);
         } catch (IncorrectCredentialsException e) {
-            result.setStateInfo("账号或密码错误");
+            result =  ResultGenerator.genFailResult("账号或密码错误");
         } catch (AuthenticationException e) {
-            result.setStateInfo("登录失败，请稍后再试");
+            result = ResultGenerator.genFailResult("登录失败，请稍后再试");
         }
         return result;
     }
@@ -59,7 +59,7 @@ public class StudentController {
     @PostMapping("/register")
     public Result register(String mobile, String password, String captcha) {
         //检查短信验证码
-        captchaService.check(mobile, captcha);
+//        captchaService.check(mobile, captcha);
         //注册
         Student student = new Student();
         student.setMobile(mobile);

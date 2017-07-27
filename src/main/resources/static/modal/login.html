@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../user/css/login.css"/>
+    <style>
+        .loginNew {
+            width: 300px;
+            margin: 50px auto 0 auto;
+        }
+
+        .login-dl {
+            position: relative;
+            text-align: center;
+        }
+
+        .login-dl div {
+            border-bottom: 1px solid #eee;
+            position: absolute;
+            top: 10px;
+            width: 300px;
+            z-index: 1;
+        }
+
+        .login-dl span {
+            font-size: 14px;
+            background: #fff;
+            padding: 5px 10px;
+            position: relative;
+            z-index: 2;
+            color: #999;
+        }
+    </style><!--为了兼容IE8请不要删除该标签-->
+</head>
+
+<body>
+<div class="stratum">
+    <div class="alert">
+        <div class="close-btn" onclick="layer.closeAll();"></div>
+        <div class="loginNew">
+            <div class="login-dl">
+                <div></div>
+                <span>使用手机号登录</span>
+            </div>
+        </div>
+        <div class="search">
+            <form id="login-form">
+                <div class="phone">
+                    <input style="color:#999" data-tag="手机号" placeholder="手机号" type="text" name="mobile"
+                           id="login-username">
+                    <div class="positioning"></div>
+                </div>
+                <div class="password">
+                    <input style="color:#999" type="password" placeholder="请输入密码" name="password" id="login-password">
+                    <div class="positioning"></div>
+                </div>
+            </form>
+        </div>
+        <div class="link">
+            <span>还没有会计狮账号？<a id="login-register-btn" href="#">免费注册</a></span>
+            <a id="login-password-btn" href="#">忘记密码?</a>
+        </div>
+        <div class="denglu">
+            <input id="login-btn" type="submit" value="登录" class="login"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../user/js/login.js"></script>
+</body>
+</html>

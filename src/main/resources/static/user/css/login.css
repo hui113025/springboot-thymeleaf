@@ -1,0 +1,119 @@
+/*--login start--*/
+.stratum{position: fixed;top: 0; left: 0; width: 100%; height: 100%;background-color:RGBA(136, 136, 136, 0.31) ;}
+.alert{width: 500px; height: 360px;position:absolute;
+   top:50%;
+   left:50%;
+   margin-top:-225px;
+   margin-left:-250px; background: #ffffff; border-radius: 5px; overflow: hidden;}
+.logo-img{ width: 300px ; height: 56px; text-align: center; margin: auto; margin-top: 40px;}
+.search{width: 300px; height: auto;  margin: 0px auto; margin-top: 30px; padding-bottom: 30px;}
+.search input{ width:100%;height: 38px;*height: 36px; line-height: 38px; border: 0;text-indent: 10px;background: #f7f9fa; font-size: 14px; }
+.phone{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;background: #f7f9fa;}
+.password{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7;border-radius: 3px; margin-top: 20px;background: #f7f9fa;}
+.positioning{position: absolute;top: 41px; left: 0; width: 300px; height: 16px; line-height: 16px; font-size: 12px; color: #ff8142;}
+.positioning-one{position: absolute;top: 41px; left: 0; width: 300px; height: 16px; line-height: 16px; font-size: 12px; color: #ff8142;}
+
+.rails{ width: 300px; height: 14px;line-height: 14px; font-size: 12px; text-align: center; margin: auto; margin-top: 10px; color: #b0b0b0;}
+.link{ width: 300px;  height: 20px; margin: 0px auto;  line-height: 20px;}
+.link a{ font-size: 14px;  color: #5583db;}
+.link a:hover{color:#3b5b98; text-decoration: underline !important;}
+.link span{ float: right;color: #999999; font-size: 14px;height: 20px;line-height: 20px;}
+.denglu{width: 300px; height: auto;overflow: hidden; margin: 0px auto;}
+.login{cursor:pointer;width: 300px; height: 40px; line-height: 40px; text-align: center; margin: 0px auto;line-height: 40px; margin-top: 10px; background: #5583db;color: #FFFFFF; border-radius: 3px; border: 0;
+   outline: none; font-size: 16px;}
+.login:hover{background: #3b5b98;}
+.daw{ font-size: 12px; width: 300px; height: 45px; line-height: 45px; margin: 0px auto;}
+.daw span{ float: left; height: 45px; line-height: 45px;color: #b0b0b0;}
+
+/*--register start--*/
+.Control{ width: 100%; height: auto;overflow: hidden; }
+.register-top{width: 100%; height: 45px; border-bottom: 1px solid #F3F3F3; text-align: center; padding-top: 25px;}
+.register-top ul{ width: 145px; height: 45px; margin: 0px auto;text-align: center;list-style-type: none;}
+.register-top li{ width: 145px; height: 43px; float: left; line-height: 44px; text-align: center; cursor:pointer; font-size: 16px;color: #666666;}
+.phong-Control{ width: 100%; height: 354px;margin-top: 20px;}
+.phone-number{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto;background: #f7f9fa; }
+.phone-number input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0; text-indent:10px; background: #f7f9fa; font-size: 14px;  }
+.password-number{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto; margin-top: 20px;background: #f7f9fa;}
+.password-number input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0; text-indent:10px;background: #f7f9fa; font-size: 14px; }
+.code{ width: 300px; height: 40px; margin: 0px auto; margin-top: 20px;}
+.code-number{position: relative; width: 150px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
+.code-number input{ width: 150px;height: 38px;line-height: 38px;*height: 36px;border: 0;  text-indent:10px;background: #f7f9fa; font-size: 14px;  }
+.code-numberO{position: relative; width: 150px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
+.code-numberO input{ width: 150px;height: 38px;line-height: 38px;*height: 36px;border: 0; text-indent:10px;background: #f7f9fa; font-size: 14px;  }
+.code-img{width: 140px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 14px;}
+.code-img img{cursor: pointer}
+.note{ width: 300px; height: 40px; margin: 0px auto; margin-top: 20px;}
+.note-number{position: relative; width: 198px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
+.note-number input{ width: 198px;height: 38px;line-height: 38px;border:0;*height: 36px;   text-indent:10px;background: #f7f9fa; font-size: 14px;}
+.note-numberO{position: relative; width: 198px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
+.note-numberO input{ width: 198px;height: 38px;line-height: 38px;border:0;*height: 36px;  text-indent:10px;background: #f7f9fa; font-size: 14px;}
+.note-img{width: 90px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 12px; background: #cccccc; border-radius: 3px; color: #FFFFFF;}
+.zhuce{width: 300px; height: auto;overflow: hidden; margin: 0px auto;margin-top: 20px;}
+.register{cursor:pointer;width: 300px; height: 40px; line-height: 40px; text-align: center; margin: 0px auto;line-height: 40px;  background: #5583db;color: #FFFFFF; border-radius: 3px; border: 0;
+   outline: none; font-size: 16px;}
+.register:hover{background: #3b5b98;}
+.protocol{width: 300px; height: 20px; line-height: 20px; margin: 0px auto; margin-top: 10px; font-size: 12px;}
+.protocol input{ width: 13px; height: 13px; margin-top: 4px; float: left;}
+.protocol span{float: left; margin-left: 5px;color: #b0b0b0;}
+.protocol a{float: left; margin-left: 5px; color: #5583db;}
+.protocol a:hover{color: #3b5b98 !important;}
+/*--email start--*/
+.email-Control{ width: 100%; height: 354px;margin-top: 20px; display: none;}
+.email{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto;background: #f7f9fa; }
+.email input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0;text-indent:10px;background: #f7f9fa; font-size: 14px; color: #c2c3c3; }
+.email-pass{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto; margin-top: 20px;background: #f7f9fa;}
+.email-pass input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0; padding-left: 10px;background: #f7f9fa; font-size: 14px;color: #c2c3c3; }
+.email-code{ width: 300px; height: 40px; margin: 0px auto; margin-top: 20px;}
+.emailcode-number{position: relative; width: 198px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
+.emailcode-number input{ width: 198px;height: 38px;line-height: 38px;*height: 36px;border: 0;text-indent:10px;background: #f7f9fa; font-size: 14px;color: #c2c3c3;  }
+.emailcode-img{width: 100px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 14px;}
+.email-zhuce{width: 300px; height: auto;overflow: hidden; margin: 0px auto;margin-top: 20px;}
+.email-register{cursor:pointer;width: 300px; height: 40px; line-height: 40px; text-align: center; margin: 0px auto;line-height: 40px;  background: #5583db;color: #FFFFFF; border-radius: 3px; border: 0;
+   outline: none; font-size: 16px;}
+.email-register:hover{background: #3b5b98;}
+.email-protocol{width: 300px; height: 20px; line-height: 20px; margin: 0px auto; margin-top: 10px; font-size: 12px;}
+.email-protocol input{ width: 13px; height: 13px; margin-top: 4px; float: left;}
+.email-protocol span{float: left; margin-left: 5px;color: #b0b0b0;}
+.email-protocol a{float: left; margin-left: 5px; color: #5583db;}
+.email-protocol a:hover{color: #3b5b98;}
+
+
+.Findnote-img{width: 90px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 14px; background:#5583db; border-radius: 3px; color: #FFFFFF;cursor: pointer;}
+.Findnote-img:hover{background:#3b5b98;}
+
+.reset{ width: 500px; height: 320px;background: #FFFFFF; position: absolute;top: 50%;left: 50%; margin-top: -160px; margin-left: -250px; border-radius: 5px; overflow: hidden; display: none;}
+.reset-top{ width: 100%; height: 45px; border-bottom: 1px solid #F3F3F3; text-align: center; padding-top: 30px;}
+.reset-top ul{ width: 110px; height: 45px; margin: 0px auto; }
+.reset-top li{font-size: 16px; width: 110px; height: 43px; float: left; line-height: 44px; text-align: center; color: #666666;}
+.reset-pass{width: 100%; height: 354px;margin-top: 20px;}
+.reset-password{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto; }
+.reset-password input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0;text-indent:10px;background: #f7f9fa; font-size: 14px; color: #c2c3c3; }
+.yes-password{position: relative; width: 298px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px; margin: 0px auto; margin-top: 20px; }
+.yes-password input{ width: 298px;height: 38px;line-height: 38px;*height: 36px;border: 0; text-indent:10px;background: #f7f9fa; font-size: 14px; color: #c2c3c3; }
+.reset-step{width: 300px; height: auto;overflow: hidden; margin: 0px auto;margin-top: 20px;}
+.resetNext-step{width: 300px; height: 40px; line-height: 40px; text-align: center; margin: 0px auto;line-height: 40px;  background: #5583db;color: #FFFFFF; border-radius: 3px; border: 0;
+   outline: none; font-size: 16px;}
+.resetNext-step:hover{background: #3b5b98;}
+/*--succeed start--*/
+.succeed{width: 500px; height: 320px; background: #FFFFFF; position: absolute;top: 50%;left: 50%; margin-top: -160px; margin-left: -250px; border-radius: 5px; overflow: hidden; display: none;}
+.succeed-bottom{width: 100%; height: 140px; padding-top: 30px;  text-align: center;}
+.succeed-save{width: 100%; height: 30px; line-height: 30px; font-size: 16px; color: #747474;}
+.succeed-step{width: 300px; height: auto;overflow: hidden; margin: 0px auto;margin-top: 0px;}
+.succeedNext-step{cursor:pointer;width: 300px; height: 40px; line-height: 40px; text-align: center; margin: 0px auto;line-height: 40px;  background: #5583db;color: #FFFFFF; border-radius: 3px; border: 0;
+   outline: none; font-size: 16px;}
+.succeedNext-step:hover{background: #3b5b98;}
+/*--EM start--*/
+
+.close-btn {
+   cursor: pointer;
+   float: right;
+   width: 35px;
+   height: 25px;
+   margin-top: 15px;
+   margin-right: 10px;
+   background: url(../images/guanbi_03.png) no-repeat center center;
+}
+
+.close-btn:hover {
+   background: url(../images/guanbi_07.png) no-repeat center center;
+}

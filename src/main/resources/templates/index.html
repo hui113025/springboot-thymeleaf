@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <!-- load stylesheets -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="../plugins/layer-v2.3/layer/skin/layer.css" rel="stylesheet"/>
 </head>
 <body>
-    首页
+<a href="javascript:void(0)" onclick="Util.Modal.show('/modal/register.html')">注册</a>
+<a href="javascript:void(0)" onclick="Util.User.login(function() {location.reload();});">登录</a>
+<a href="/user/logout">退出</a>
+<p th:if="${session.SESSION_USER}">用户：<i th:text="${session.SESSION_USER.mobile}" />（<i th:text="${session.SESSION_USER.nickName}" />）&nbsp;已登录</p>
 <!-- load JS files -->
-<script src="../js/jquery-1.11.3.min.js"></script>            <!-- jQuery (https://jquery.com/download/) -->
+<script src="../common/js/jquery-1.9.1.js"></script>           <!-- jQuery (https://jquery.com/download/) -->
+<script src="../plugins/layer-v2.3/layer/layer.js"></script>
+<script src="../common/js/utils.js"></script>
 </body>
 </html>

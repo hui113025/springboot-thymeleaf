@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../help/css/idea.css"/>
+
+    <link href="/plugins/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet">
+</head>
+<body>
+<div class="helpRight-all">
+    <div class="helpRight-top">
+        <div>意见反馈</div>
+    </div>
+
+    <div class="helpRight-bottom">
+        <form id="feedback-form">
+            <div class="idea-bt">
+                <div class="bt-zt">标题：</div>
+                <div class="bt-srk">
+                    <input type="text" MAXLENGTH="50" name="feedbackTitle" />
+                </div>
+            </div>
+            <div class="idea-bt">
+                <div class="bt-zt">内容：</div>
+                <textarea MAXLENGTH="500" name="feedbackDesc"></textarea>
+            </div>
+
+            <div class="idea-bt">
+                <div class="bt-zt">截图：</div>
+                <div class="addimage" id="preview-img-div" style="display: none">
+                    <img id="preview-img" style="width: 100%;height: 100%;margin:0"/>
+                </div>
+					 <span class="btn fileinput-button " style="padding: 0" id="upload-btn">
+						<span>
+							<div class="addimage">
+								<img src="/help/images/jiahao_03.png"/>
+							</div>
+						</span>
+						<input id="imageFile" type="file" name="imageFile">
+						<input type="hidden" id="image-path" name="imgUrl">
+        		    </span>
+            </div>
+            <div class="idea-bt">
+                <div class="bt-zt">联系方式：</div>
+                <div class="bt-srk">
+                    <input type="text" maxlength="50" name="phone" placeholder="(手机、QQ、邮箱)"/>
+                </div>
+            </div>
+            <div class="idea-tj">
+                <input type="button" value="提交" id="submit-btn"/>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/plugins/jquery-file-upload/js/jquery.fileupload.all.js"></script>
+<script src="/help/js/feedback.js"></script>
+</body>
+</html>

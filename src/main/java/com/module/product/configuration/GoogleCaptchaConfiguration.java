@@ -15,11 +15,11 @@ public class GoogleCaptchaConfiguration {
         DefaultKaptcha defaultKaptcha = new DefaultKaptcha();
         Properties properties = new Properties();
         properties.setProperty("kaptcha.noise.impl", "com.google.code.kaptcha.impl.NoNoise");
-        properties.setProperty("kaptcha.obscurificator.impl", "com.ruhang.product.common.BlankGimpy");
+        properties.setProperty("kaptcha.obscurificator.impl", "com.module.product.common.BlankGimpy");
         properties.setProperty("kaptcha.border", "no");
         properties.setProperty("kaptcha.border.color", "85,131,219");
         properties.setProperty("kaptcha.textproducer.font.color", "33,166,46");
-        properties.setProperty("kaptcha.image.width", "125");
+        properties.setProperty("kaptcha.images.width", "125");
         properties.setProperty("kaptcha.session.key", "code");
         properties.setProperty("kaptcha.textproducer.char.length", "4");
         properties.setProperty("kaptcha.textproducer.font.names", "宋体");

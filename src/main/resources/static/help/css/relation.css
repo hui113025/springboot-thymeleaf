@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+img{border: 0;}
+a{text-decoration: none;}
+input{outline: none;}
+li{list-style-type: none;}
+body{background: #f0f2f5;}
+
+.helpRight-all{ width: 100%; height: auto;overflow: hidden; background: #FFFFFF;}
+.helpRight-top{ height: 70px; border-bottom: 1px solid #eef3fa;}
+.helpRight-top div{ width: 75px; height: 50px; line-height: 50px; border-bottom: 2px solid #5583DB; font-size: 14px; text-align: center; color: #666666; padding-top: 19px; margin-left: 30px; }
+.helpRight-bottom{ height: auto;overflow: hidden; padding: 30px;}
+
+.wenti p{ font-size: 12px; color: #a9a9a9; line-height: 24px;}
+.relationBt{ font-size: 18px;height: auto;overflow: hidden; margin-bottom:15px ;}
+.map{font-size: 18px;height: auto;overflow: hidden; margin-bottom:25px ;}
+.map img{ width: 100%;}
+

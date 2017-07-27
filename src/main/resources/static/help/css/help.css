@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background: #f0f2f5;
+}
+
+.help-all {
+    width: 1226px;
+    text-overflow: ellipsis;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.help-nav {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #333333;
+}
+
+.help-nav a {
+    font-size: 12px;
+    color: #666666;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.help-nav a:hover {
+    color: #5583db !important;
+}
+
+.help-bottom {
+    margin-top: 20px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.help-left {
+    width: 250px;
+    height: 400px;
+    background: #FFFFFF;
+    float: left;
+}
+
+.help-tb {
+    height: 59px;
+    text-align: center;
+    border-bottom: 1px solid #eef3fa;
+    padding-top: 10px;
+}
+
+.help-left ul {
+    height: auto;
+    overflow: hidden;
+}
+
+.help-left li {
+    color: #666666;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 36px;
+    border-left: 3px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.help-left li:hover {
+    color: #5583db;
+}
+
+.help-right {
+    height: auto;
+    overflow: hidden;
+    margin-left: 260px;
+    background: #FFFFFF;
+}
+
+@media only screen and (max-width: 800px ) {
+    .help-all {
+        width: 800px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px ) {
+    .help-all {
+        width: 1226px;
+    }
+
+}
