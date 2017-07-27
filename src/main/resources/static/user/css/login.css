@@ -40,7 +40,7 @@
 .code-number input{ width: 150px;height: 38px;line-height: 38px;*height: 36px;border: 0;  text-indent:10px;background: #f7f9fa; font-size: 14px;  }
 .code-numberO{position: relative; width: 150px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
 .code-numberO input{ width: 150px;height: 38px;line-height: 38px;*height: 36px;border: 0; text-indent:10px;background: #f7f9fa; font-size: 14px;  }
-.code-img{width: 140px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 14px;}
+.code-img{width: 140px; height: 40px; float: right;line-height: 40px; text-align: center; font-size: 14px;margin-top: -10px;}
 .code-img img{cursor: pointer}
 .note{ width: 300px; height: 40px; margin: 0px auto; margin-top: 20px;}
 .note-number{position: relative; width: 198px; height: 38px;border: 1px solid #e7e7e7; border-radius: 3px;  float: left;background: #f7f9fa;}
