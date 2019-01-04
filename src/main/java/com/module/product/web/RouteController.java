@@ -1,5 +1,6 @@
 package com.module.product.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.common.collect.Lists;
 import com.module.product.orm.model.Student;
@@ -18,7 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -109,7 +112,17 @@ public class RouteController {
      * @return
      */
     @PostMapping("/testMock")
-    public String testPost() {
+    public String testMock() {
         return "testMock";
+    }
+
+    @PostMapping("/testMockByResponseBodyParam")
+    public String testMockByResponseBodyParam(@RequestBody Map paramMap) {
+        return JSONObject.toJSONString(paramMap);
+    }
+
+    @PostMapping("/testMockForRequestParam")
+    public String testMockForParm(@RequestParam String name) {
+        return name;
     }
 }
