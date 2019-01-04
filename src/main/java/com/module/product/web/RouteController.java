@@ -7,9 +7,10 @@ import com.module.product.service.CaptchaService;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
@@ -23,7 +24,7 @@ import java.util.List;
  * <p>
  * 路由控制器，所有页面的路由写在该类下，该控制器只允许返回View，且HttpRequest方法必须为Get。
  */
-@Controller
+@RestController
 public class RouteController {
 
     @Resource
@@ -69,9 +70,9 @@ public class RouteController {
         }
     }
 
-    @GetMapping("/test")
+    @GetMapping("/test1")
     public String test(){
-        return "test";
+        return "ok";
     }
 
     @GetMapping(value = "/jsonp/redirect/view")
@@ -101,5 +102,14 @@ public class RouteController {
     @GetMapping("/help")
     public String help() {
         return "help";
+    }
+
+    /**
+     * @RestController包含@ResponseBody注解
+     * @return
+     */
+    @PostMapping("/testMock")
+    public String testPost() {
+        return "testMock";
     }
 }

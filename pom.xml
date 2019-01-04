@@ -121,11 +121,11 @@
 			<scope>test</scope>
 		</dependency>
 		<!--短信验证码-->
-		<dependency>
-			<groupId>com.CCPRestSmsSDK</groupId>
-			<artifactId>CCPRestSmsSDK</artifactId>
-			<version>2.6.3</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.CCPRestSmsSDK</groupId>-->
+			<!--<artifactId>CCPRestSmsSDK</artifactId>-->
+			<!--<version>2.6.3</version>-->
+		<!--</dependency>-->
 		<!--图形验证码-->
 		<dependency>
 			<groupId>com.github.axet</groupId>
@@ -185,8 +185,8 @@
 	<repositories>
 
 		<repository>
-			<id>nexus</id>
-			<url>http://106.39.118.131:8081/nexus/content/groups/public/</url>
+			<id>alimaven</id>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>

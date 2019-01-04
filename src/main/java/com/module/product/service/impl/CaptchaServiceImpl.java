@@ -1,6 +1,5 @@
 package com.module.product.service.impl;
 
-import com.cloopen.rest.sdk.CCPRestSmsSDK;
 import com.module.core.exception.ServiceException;
 import com.module.product.orm.mapper.StudentMapper;
 import com.module.product.orm.model.Student;
@@ -15,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import static com.module.product.common.Constants.*;
@@ -26,13 +26,14 @@ import static com.module.product.common.Constants.*;
 @Service
 public class CaptchaServiceImpl implements CaptchaService, InitializingBean {
     private final Logger logger = LoggerFactory.getLogger(getClass());
-    private CCPRestSmsSDK sdk;
+//    private CCPRestSmsSDK sdk;
 
     @Autowired
     private StringRedisTemplate redis;
-    @Autowired
+    @Resource
     private StudentMapper studentMapper;
 
+    @Override
     public String send(String mobile, int type) {
         Student condition = new Student();
         condition.setMobile(mobile);
@@ -50,6 +51,7 @@ public class CaptchaServiceImpl implements CaptchaService, InitializingBean {
         return captcha;
     }
 
+    @Override
     public void check(String mobile, String captcha) {
         String key = CACHE_KEY_PREFIX_CAPTCHA_SMS + mobile;
         if (redis.hasKey(key)) {
@@ -63,21 +65,25 @@ public class CaptchaServiceImpl implements CaptchaService, InitializingBean {
 
     }
 
+    @Override
     public void clean(String mobile) {
         String key = CACHE_KEY_PREFIX_CAPTCHA_SMS + mobile;
         if (redis.hasKey(key)) redis.delete(key);
     }
 
+    @Override
     public void setImageCaptcha(HttpSession session, String captcha) {
         session.setAttribute(SESSION_IMAGE_CAPTCHA_KEY, captcha);
     }
 
+    @Override
     public void checkImageCaptcha(HttpSession session, String captcha) {
         if (!StringUtils.equals(captcha, (String) session.getAttribute(SESSION_IMAGE_CAPTCHA_KEY))) {
             throw new ServiceException("图形验证码错误");
         }
     }
 
+    @Override
     public void cleanImageCaptcha(HttpSession session) {
         if (session.getAttribute(SESSION_IMAGE_CAPTCHA_KEY) != null) {
             session.removeAttribute(SESSION_IMAGE_CAPTCHA_KEY);
