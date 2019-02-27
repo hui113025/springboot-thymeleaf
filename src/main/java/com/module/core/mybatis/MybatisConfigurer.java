@@ -7,6 +7,8 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.annotation.Resource;
@@ -42,8 +44,8 @@ public class MybatisConfigurer {
         bean.setPlugins(new Interceptor[]{pageHelper});
 
         //添加XML目录
-       /* ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        bean.setMapperLocations(resolver.getResources("classpath:mapper*//*.xml"));*/
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        bean.setMapperLocations(resolver.getResources("classpath:mapper*//*.xml"));
         return bean.getObject();
     }
 
